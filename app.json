@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "marlisaudebrasilia",
+    "slug": "marlisaudebrasilia",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
