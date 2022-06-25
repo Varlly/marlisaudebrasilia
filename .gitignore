@@ -50,6 +50,6 @@ buck-out/
 /ios/Pods/
 
 # Expo
-.expo/
-web-build/
-dist/
+#.expo/
+#web-build/
+#dist/
