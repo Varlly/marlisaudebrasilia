@@ -1,18 +1,18 @@
 import styled from "styled-components/native";
-import { RFValue } from 'react-native-responsive-fontsize';
+import { RFValue, RFPercentage } from 'react-native-responsive-fontsize';
 //import { UsersThree } from 'phosphor-react-native';
 import { Feather } from '@expo/vector-icons';
 
 export const Container = styled.View`
     background-color: ${({ theme }) => theme.colors.background};
-    width: ${RFValue(300)}px;
-    height: ${RFValue(170)}px;
+    width: ${RFPercentage(80)}px;
+    //height: ${RFValue(170)}px;
 
     position: absolute;
     padding: 24px;
     margin-top: ${RFValue(180)}px;
     margin-left: ${RFValue(24)}px;
-    border: 1px;
+    border: 1px ${({ theme }) => theme.colors.primary};
     border-radius: 16px;
 `;
 
