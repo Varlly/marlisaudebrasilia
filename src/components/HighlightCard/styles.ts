@@ -21,7 +21,7 @@ export const Header = styled.View`
 
 export const Title = styled.Text`
     font-family: ${({ theme }) => theme.fonts.bold};
-    font-size: ${RFValue(16)}px;
+    font-size: ${RFValue(14)}px;
 `;
 
 export const Content = styled.View`
@@ -34,7 +34,7 @@ export const Content = styled.View`
 export const Label = styled.Text`
     color: ${({ theme }) => theme.colors.label};
     font-family: ${({ theme }) => theme.fonts.medium};
-    font-size: ${RFValue(12)}px;
+    font-size: ${RFValue(10)}px;
 `;
 
 export const Amount = styled.Text`
@@ -59,5 +59,5 @@ export const Icon = styled(Feather)`
 export const AmountDay = styled.Text`
     color: ${({ theme }) => theme.colors.primary};
     font-size: ${RFValue(18)}px;
-    margin-left: 6px;
+    margin-left: ${RFValue(6)}px;;
 `;

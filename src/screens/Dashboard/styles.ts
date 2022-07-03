@@ -9,7 +9,7 @@ export const Container = styled.View`
 
 export const Header = styled.View`
     width: 100%;
-     height: ${RFPercentage(38)}px;
+    height: ${RFPercentage(38)}px;
     background-color:${({ theme }) => theme.colors.primary};
    
 `;
@@ -54,7 +54,6 @@ export const Icon = styled(MaterialIcons)`
 `;
 
 export const HighlightCards = styled.ScrollView`
-    margin-top: ${RFValue(180)}px;
     padding-left: ${RFValue(24)}px;
-    position: absolute;
+    margin-top: ${RFValue(-80)}px;;
 `;

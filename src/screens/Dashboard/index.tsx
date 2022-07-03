@@ -35,7 +35,9 @@ export function Dashboard() {
       <HighlightCards
         horizontal
         showsHorizontalScrollIndicator={false}
+        accessibilityRole='button'
       >
+        <HighlightCard />
         <HighlightCard />
         <HighlightCard />
       </HighlightCards>
