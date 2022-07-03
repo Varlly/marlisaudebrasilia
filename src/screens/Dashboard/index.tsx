@@ -1,26 +1,37 @@
 import React from 'react';
-import { RFValue } from 'react-native-responsive-fontsize';
-import { AntDesign } from '@expo/vector-icons';
-import { SvgUri } from 'react-native-svg';
+
 import {
   Container,
   Header,
-  Head,
-  HeadTitle,
+  Info,
+  Logo,
+  User,
+  UserGreting,
+  UserName,
+  Icon,
+  HeadWapper
 } from './styles';
 
-const Brand = SvgUri;
+import { HighlightCard } from '../../components/HighlightCard';
+
+
 
 export function Dashboard() {
   return (
     <Container>
-      <Head>
-        <Header>
-         
-          <HeadTitle>Dashboard</HeadTitle>
-        </Header>
-        <AntDesign name="logout" size={RFValue(24)} color="white" />
-      </Head>
+      <Header>
+        <HeadWapper>
+          <Info>
+            <Logo />
+            <User>
+              <UserGreting>Olá, </UserGreting>
+              <UserName>Hemerson</UserName>
+            </User>
+          </Info>
+          <Icon name="logout" />
+        </HeadWapper>
+      </Header>
+      <HighlightCard />
     </Container>
   );
 }

@@ -9,9 +9,11 @@ import * as SplashScreen from 'expo-splash-screen';
 import * as  Font from 'expo-font'
 import { ThemeProvider } from 'styled-components';
 import {
+    Roboto_300Light,
     Roboto_400Regular,
     Roboto_500Medium,
-    Roboto_700Bold
+    Roboto_700Bold,
+    Roboto_900Black
 } from '@expo-google-fonts/roboto';
 
 import { Dashboard } from './src/screens/Dashboard';
@@ -27,9 +29,11 @@ export default function App() {
                 await SplashScreen.preventAutoHideAsync();
                 // Pre-load fonts, make any API calls you need to do here
                 await Font.loadAsync({
+                    Roboto_300Light,
                     Roboto_400Regular,
                     Roboto_500Medium,
-                    Roboto_700Bold
+                    Roboto_700Bold,
+                    Roboto_900Black
                 });
                 // Artificially delay for two seconds to simulate a slow loading
                 // experience. Please remove this if you copy and paste the code!
