@@ -9,7 +9,8 @@ import {
   UserGreting,
   UserName,
   Icon,
-  HeadWapper
+  HeadWapper,
+  HighlightCards
 } from './styles';
 
 import { HighlightCard } from '../../components/HighlightCard';
@@ -31,7 +32,13 @@ export function Dashboard() {
           <Icon name="logout" />
         </HeadWapper>
       </Header>
-      <HighlightCard />
+      <HighlightCards
+        horizontal
+        showsHorizontalScrollIndicator={false}
+      >
+        <HighlightCard />
+        <HighlightCard />
+      </HighlightCards>
     </Container>
   );
 }

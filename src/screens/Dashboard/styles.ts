@@ -4,20 +4,19 @@ import { SvgUri } from 'react-native-svg';
 import { MaterialIcons } from '@expo/vector-icons';
 
 export const Container = styled.View`
-    flex: 1;
-    background-color:${({ theme }) => theme.colors.background};
+   background-color:${({ theme }) => theme.colors.background};
 `;
 
 export const Header = styled.View`
     width: 100%;
-    height: ${RFPercentage(38)}px;
+     height: ${RFPercentage(38)}px;
     background-color:${({ theme }) => theme.colors.primary};
    
 `;
 
 export const HeadWapper = styled.View`
     width: 100%;
-    padding: 0 24px;
+    padding: 0 ${RFValue(24)}px;
     margin-top: 50px;
     flex-direction: row;
     justify-content: space-between;
@@ -52,4 +51,10 @@ export const UserName = styled.Text`
 export const Icon = styled(MaterialIcons)`
     color: ${({ theme }) => theme.colors.info};
     font-size:  ${RFValue(32)}px;
+`;
+
+export const HighlightCards = styled.ScrollView`
+    margin-top: ${RFValue(180)}px;
+    padding-left: ${RFValue(24)}px;
+    position: absolute;
 `;

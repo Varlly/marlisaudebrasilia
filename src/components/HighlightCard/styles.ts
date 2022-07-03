@@ -4,16 +4,14 @@ import { RFValue, RFPercentage } from 'react-native-responsive-fontsize';
 import { Feather } from '@expo/vector-icons';
 
 export const Container = styled.View`
-    flex: 1;
     background-color: ${({ theme }) => theme.colors.background};
     width: ${RFPercentage(42)}px;
     height: ${RFPercentage(22)}px;
 
-    position: absolute;
     padding: ${RFPercentage(2.5)}px;
     justify-content: space-between;
-    margin-top: ${RFValue(180)}px;
-    margin-left: ${RFValue(24)}px;
+  
+    margin-right: ${RFValue(24)}px;
     border: 1px ${({ theme }) => theme.colors.primary};
     border-radius: 16px;
 `;
@@ -23,11 +21,11 @@ export const Header = styled.View`
 
 export const Title = styled.Text`
     font-family: ${({ theme }) => theme.fonts.bold};
-    font-size: ${RFValue(18)}px;
+    font-size: ${RFValue(16)}px;
 `;
 
 export const Content = styled.View`
-    margin-top: ${RFPercentage(1)}px;
+    margin-top: ${RFPercentage(0.1)}px;
     margin-bottom: ${RFPercentage(0.1)}px;
     flex-direction: row;
     justify-content: space-between;
@@ -40,9 +38,9 @@ export const Label = styled.Text`
 `;
 
 export const Amount = styled.Text`
-    margin-top: -7px;
-    color: ${({ theme }) => theme.colors.info};
-    font-size: ${RFValue(38)}px;
+    margin-top: ${RFValue(-7)}px;;
+    color: ${({ theme }) => theme.colors.primary};
+    font-size: ${RFValue(36)}px;
     font-family: ${({ theme }) => theme.fonts.bold};
 `;
 
@@ -51,18 +49,15 @@ export const Footer = styled.View`
      align-items: baseline;
 `;
 
-export const WrappedAmount = styled.View`
-     
-`;
+export const WrappedAmount = styled.View``;
 
 export const Icon = styled(Feather)`
-   color: ${({ theme }) => theme.colors.info};
-   font-size: ${RFValue(60)}px;
-   
+   color: ${({ theme }) => theme.colors.primary};
+   font-size: ${RFValue(54)}px;
 `;
 
 export const AmountDay = styled.Text`
-    color: ${({ theme }) => theme.colors.info};
+    color: ${({ theme }) => theme.colors.primary};
     font-size: ${RFValue(18)}px;
     margin-left: 6px;
 `;

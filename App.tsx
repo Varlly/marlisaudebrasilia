@@ -7,7 +7,7 @@ import React, {
 import { View } from 'react-native';
 import * as SplashScreen from 'expo-splash-screen';
 import * as  Font from 'expo-font'
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components/native';
 import {
     Roboto_300Light,
     Roboto_400Regular,

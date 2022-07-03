@@ -24,7 +24,7 @@ export function HighlightCard() {
                     <Label>Total</Label>
                     <Amount>15.000</Amount>
                 </WrappedAmount>
-                <Icon name="users" />
+                <Icon name="users"/>
             </Content>
             <Footer>
                 <Label>Hoje:</Label>
