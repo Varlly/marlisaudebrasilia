@@ -4,12 +4,14 @@ import { RFValue, RFPercentage } from 'react-native-responsive-fontsize';
 import { Feather } from '@expo/vector-icons';
 
 export const Container = styled.View`
+    flex: 1;
     background-color: ${({ theme }) => theme.colors.background};
-    width: ${RFPercentage(46)};
-    height: ${RFPercentage(25)}px;
+    width: ${RFPercentage(42)}px;
+    height: ${RFPercentage(22)}px;
 
     position: absolute;
-    padding: 24px;
+    padding: ${RFPercentage(2.5)}px;
+    justify-content: space-between;
     margin-top: ${RFValue(180)}px;
     margin-left: ${RFValue(24)}px;
     border: 1px ${({ theme }) => theme.colors.primary};
@@ -25,8 +27,8 @@ export const Title = styled.Text`
 `;
 
 export const Content = styled.View`
-    margin-top: ${RFValue(12)}px;
-    margin-bottom: ${RFValue(6)}px;
+    margin-top: ${RFPercentage(1)}px;
+    margin-bottom: ${RFPercentage(0.1)}px;
     flex-direction: row;
     justify-content: space-between;
   `;
