@@ -5,8 +5,8 @@ import { Feather } from '@expo/vector-icons';
 
 export const Container = styled.View`
     background-color: ${({ theme }) => theme.colors.background};
-    width: ${RFPercentage(50)};
-    //height: ${RFValue(170)}px;
+    width: ${RFPercentage(46)};
+    height: ${RFPercentage(25)}px;
 
     position: absolute;
     padding: 24px;
