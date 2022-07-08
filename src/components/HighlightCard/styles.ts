@@ -1,63 +1,71 @@
-import styled from "styled-components/native";
-import { RFValue, RFPercentage } from 'react-native-responsive-fontsize';
-//import { UsersThree } from 'phosphor-react-native';
+import styled, { css } from 'styled-components/native';
 import { Feather } from '@expo/vector-icons';
+import { RFValue } from 'react-native-responsive-fontsize';
 
-export const Container = styled.View`
-    background-color: ${({ theme }) => theme.colors.background};
-    width: ${RFPercentage(42)}px;
-    height: ${RFPercentage(22)}px;
+interface TypeProps {
+    type: 'up' | 'down' | 'total';
+}
 
-    padding: ${RFPercentage(2.5)}px;
-    justify-content: space-between;
-  
-    margin-right: ${RFValue(24)}px;
-    border: 1px ${({ theme }) => theme.colors.primary};
-    border-radius: 16px;
+export const Container = styled.View<TypeProps>`
+    background-color: ${ ({ theme, type }) => 
+       type === 'total' ? theme.colors.warning :theme.colors.background
+    };
+    
+    width: ${RFValue(300)}px;
+    border-radius: 6px;
+    padding: 12px;
+    padding-bottom: ${RFValue(40)}px;
+    margin-right: 16px;
 `;
 
 export const Header = styled.View`
- `;
-
-export const Title = styled.Text`
-    font-family: ${({ theme }) => theme.fonts.bold};
-    font-size: ${RFValue(14)}px;
-`;
-
-export const Content = styled.View`
-    margin-top: ${RFPercentage(0.1)}px;
-    margin-bottom: ${RFPercentage(0.1)}px;
     flex-direction: row;
     justify-content: space-between;
-  `;
-
-export const Label = styled.Text`
-    color: ${({ theme }) => theme.colors.label};
-    font-family: ${({ theme }) => theme.fonts.medium};
-    font-size: ${RFValue(10)}px;
 `;
 
-export const Amount = styled.Text`
-    margin-top: ${RFValue(-7)}px;;
-    color: ${({ theme }) => theme.colors.primary};
-    font-size: ${RFValue(36)}px;
-    font-family: ${({ theme }) => theme.fonts.bold};
+export const Title = styled.Text<TypeProps>`
+    font-family: ${({theme}) => theme.fonts.regular};
+    font-size: ${RFValue(14)}px;
+
+    color: ${ ({ theme, type }) => 
+       type === 'total' ? theme.colors.text_white : theme.colors.text
+    };
+
 `;
 
-export const Footer = styled.View`
-     flex-direction: row;
-     align-items: baseline;
+export const Icon = styled(Feather)<TypeProps>`
+    font-size: ${RFValue(40)}px;
+
+    ${ ({type}) => type === 'up' && css`
+        color: ${({theme}) => theme.colors.success};
+    `};
+
+    ${ ({type}) => type === 'down' && css`
+        color: ${ ({ theme }) => theme.colors.primary};
+    `};
+
+    ${ ({type}) => type === 'total' && css`
+        color: ${({ theme }) => theme.colors.background};
+    `};
 `;
 
-export const WrappedAmount = styled.View``;
+export const Footer = styled.View``;
 
-export const Icon = styled(Feather)`
-   color: ${({ theme }) => theme.colors.primary};
-   font-size: ${RFValue(54)}px;
+export const Amount = styled.Text<TypeProps>`
+    font-family: ${({theme}) => theme.fonts.medium};
+    font-size: ${RFValue(32)}px;
+    
+    color: ${ ({ theme, type }) => 
+       type === 'total' ? theme.colors.text_white : theme.colors.text
+    };
+    margin-top: 38px;
 `;
 
-export const AmountDay = styled.Text`
-    color: ${({ theme }) => theme.colors.primary};
-    font-size: ${RFValue(18)}px;
-    margin-left: ${RFValue(6)}px;;
+export const LastTransaction = styled.Text<TypeProps>`
+    font-family: ${({theme}) => theme.fonts.regular};
+    font-size: ${RFValue(12)}px;
+
+    color: ${ ({ theme, type }) => 
+       type === 'total' ? theme.colors.text_white : theme.colors.text
+    };
 `;

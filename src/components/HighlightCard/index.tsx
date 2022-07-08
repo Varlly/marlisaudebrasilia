@@ -1,35 +1,55 @@
 import React from 'react';
+import { View } from 'react-native';
 
-import {
+import { 
     Container,
     Header,
     Title,
-    Content,
-    Label,
-    Amount,
+    Icon,
     Footer,
-    AmountDay,
-    WrappedAmount,
-    Icon
-} from './styles';
+    Amount,
+    LastTransaction
+ } from './styles';
 
-export function HighlightCard() {
-    return (
-        <Container>
-            <Header>
-                <Title>Apoiadores indicados</Title>
-            </Header>
-            <Content>
-                <WrappedAmount>
-                    <Label>Total</Label>
-                    <Amount>15.000</Amount>
-                </WrappedAmount>
-                <Icon name="users"/>
-            </Content>
-            <Footer>
-                <Label>Hoje:</Label>
-                <AmountDay>300</AmountDay>
-            </Footer>
-        </Container>
-    );
+ interface Props {
+  title: string;
+  amount: string;
+  lastTransaction: string;
+  type: 'up' | 'down' | 'total';
+ }
+
+ const icon = {
+  up: 'arrow-up-circle',
+  down: 'arrow-down-circle',
+  total: 'dollar-sign'
+ }
+
+export function HighlightCard({ 
+  type,
+  title, 
+  amount, 
+  lastTransaction
+ }: Props) {
+  return (
+    <Container type={type}>
+        <Header>
+            <Title  type={type}>
+              {title}
+            </Title>
+            <Icon 
+              name={icon[type]} 
+              type={type} 
+            />
+        </Header>
+
+        <Footer>
+            <Amount  type={type}>
+              {amount}
+            </Amount>
+            <LastTransaction  type={type}>
+              {lastTransaction}
+            </LastTransaction>
+        </Footer>
+    </Container>
+  );
 }

@@ -61,15 +61,12 @@ export default function App() {
     }
 
     return (
-
-
         <ThemeProvider theme={theme}>
-            <View onLayout={onLayoutRootView}>
-                <StatusBar style="light" />
+            <View style={{flex: 1}} onLayout={onLayoutRootView}>
+                <StatusBar style='auto'/>
                 <Dashboard />
             </View>
         </ThemeProvider>
-
     );
 }
 
